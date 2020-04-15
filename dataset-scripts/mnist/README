@@ -1,0 +1,3 @@
+Source: https://leon.bottou.org/projects/infimnist
+
+Mnist8m dataset, converted to CSV with Joe's script https://pjreddie.com/projects/mnist-in-csv/. mnist_label.csv are the labels, and each line in mnist_train.csv contains the pixels from an image. Take subsets of the data with head -n N. 

@@ -1,0 +1,19 @@
+Source: https://www.kaggle.com/netflix-inc/netflix-prize-data/data
+
+Netflix movie ratings data. complete.txt contains the combined raw data, in the form: 
+
+movie-id:
+user-id,rating,date
+user-id,rating,date
+user-id,rating,date
+user-id,rating,date
+...
+
+number contains rust code to prefix the movie-id to each line to make the data
+relational. Remember to run with the release flag, i.e. cargo run --release ...
+Next, use dataprep.dml to convert the table into a matrix. Again, one may take
+subsets of the data by shuffling the table with shuf (important!) and taking the
+head.
+
+matrix.csv contains the entire data in matrix form, and net50k.csv samples 50k
+ratings.

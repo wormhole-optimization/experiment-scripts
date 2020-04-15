@@ -1,0 +1,9 @@
+Source: http://stat-computing.org/dataexpo/2009/the-data.html (go to this page
+via internet archive, the current site doesn not have the data).
+
+Flight delay dataset. 2007.csv contains the data for 2007, and 2008.csv for
+2008. To get the data into matrix form, first concatenate the two files. Be
+careful to remove the first line (the header). Then remove any non numeric
+columns, or recode them into numbers. SystemML DML can do this, or use python
+pandas. To get a denser matrix, the last 7/8 columns may be removed (they are
+mostly 0).

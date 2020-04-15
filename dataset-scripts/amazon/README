@@ -1,0 +1,11 @@
+Source: http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/ratings_Books.csv
+
+Amazon books rating dataset. Col. 1 is reviewer ID, col. 2 is product ID, col. 3
+is rating, col. 4 is unix time stamp (can ignore).
+
+dataprep.dml converts the data into matrix form. Run with sparkDML.sh -f
+.../dataprep.dml --args input.csv output.scv
+
+It can be helpful to generate subsets of the data. To do so, first shuffle the
+original ratings data with shuf to randomly permute the lines. Then take the
+first N lines with head -n N, and finally run dataprep.dml it to get the matrix.
